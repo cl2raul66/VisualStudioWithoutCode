@@ -1,3 +1,5 @@
+using CommunityToolkit.Mvvm.DependencyInjection;
+using FlowChartEditor.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -16,16 +18,22 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace FlowChartEditor
+namespace FlowChartEditor.Views
 {
     /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
+    /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class PgMain : Page
     {
-        public MainWindow()
+        public PgMain()
         {
             this.InitializeComponent();
+            this.DataContext = Ioc.Default.GetService<PgPgMainViewModel>();
+        }
+
+        private void TabViewItem_CloseRequested(TabViewItem sender, TabViewTabCloseRequestedEventArgs args)
+        {
+            (this.DataContext as PgPgMainViewModel).CloseDocumentCommand.Execute(null);
         }
     }
 }
