@@ -12,6 +12,22 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Views\Principal\**" />
+    <EmbeddedResource Remove="Views\Principal\**" />
+    <None Remove="Views\Principal\**" />
+    <Page Remove="Views\Principal\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\ico\commonshapes\Connector.svg" />
+    <None Remove="Assets\ico\commonshapes\Decision_if.svg" />
+    <None Remove="Assets\ico\commonshapes\Decision_switch.svg" />
+    <None Remove="Assets\ico\commonshapes\In.svg" />
+    <None Remove="Assets\ico\commonshapes\Loop_do.svg" />
+    <None Remove="Assets\ico\commonshapes\Loop_for.svg" />
+    <None Remove="Assets\ico\commonshapes\Loop_foreach.svg" />
+    <None Remove="Assets\ico\commonshapes\Loop_while.svg" />
+    <None Remove="Assets\ico\commonshapes\Out.svg" />
+    <None Remove="Assets\ico\commonshapes\Process.svg" />
     <None Remove="Views\PgCommonShapes.xaml" />
     <None Remove="Views\PgDocument.xaml" />
     <None Remove="Views\PgMain.xaml" />
@@ -48,7 +64,19 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Views\Documents\" />
-    <Folder Include="Views\Principal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\PgDocument.xaml">
@@ -84,4 +112,10 @@
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Views\Principal\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlowToCSharpConverter\FlowToCSharpConverter.csproj" />
+  </ItemGroup>
 </Project>

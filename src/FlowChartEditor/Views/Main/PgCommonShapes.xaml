@@ -12,91 +12,88 @@
     <Grid Padding="4">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Expander
-            ExpandDirection="Down"
-            Header="Common shapes"
-            IsExpanded="True">
-            <Expander.Content>
-                <StackPanel Orientation="Vertical" Spacing="2">
-                    <Border
-                        Padding="8"
-                        BorderBrush="Black"
-                        BorderThickness="1"
-                        CornerRadius="4">
-                        <StackPanel Orientation="Vertical" Spacing="2">
-                            <TextBlock Text="Process:" />
-                            <StackPanel Orientation="Horizontal" Spacing="2">
-                                <Button ToolTipService.ToolTip="Add process">
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
+        <ScrollViewer Grid.Row="0">
+            <Expander
+                Width="250"
+                MaxHeight="500"
+                ExpandDirection="Down"
+                Header="Common shapes"
+                IsExpanded="True">
+                <Expander.Content>
+                    <StackPanel Orientation="Vertical" Spacing="2">
+                        <Border
+                            Padding="8"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="4">
+                            <StackPanel Orientation="Vertical" Spacing="2">
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <ImageIcon Width="16" Source="{StaticResource Process}" />
+                                    <TextBlock Text="Process:" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <Button Content="Process" ToolTipService.ToolTip="Add process" />
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Border>
-                    <Border
-                        Padding="8"
-                        BorderBrush="Black"
-                        BorderThickness="1"
-                        CornerRadius="4">
-                        <StackPanel Orientation="Vertical" Spacing="2">
-                            <TextBlock Text="Decision:" />
-                            <StackPanel Orientation="Horizontal" Spacing="2">
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
+                        </Border>
+                        <Border
+                            Padding="8"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="4">
+                            <StackPanel Orientation="Vertical" Spacing="2">
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <ImageIcon Width="16" Source="{StaticResource Decision}" />
+                                    <TextBlock Text="Decision:" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <Button Content="If" ToolTipService.ToolTip="Add if decision" />
+                                    <Button Content="switch" ToolTipService.ToolTip="Add switch decision" />
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Border>
-                    <Border
-                        Padding="8"
-                        BorderBrush="Black"
-                        BorderThickness="1"
-                        CornerRadius="4">
-                        <StackPanel Orientation="Vertical" Spacing="2">
-                            <TextBlock Text="Input:" />
-                            <StackPanel Orientation="Horizontal" Spacing="2">
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
+                        </Border>
+                        <Border
+                            Padding="8"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="4">
+                            <StackPanel Orientation="Vertical" Spacing="2">
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <ImageIcon Width="16" Source="{StaticResource Loop}" />
+                                    <TextBlock Text="Loop:" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <Button Content="Do" ToolTipService.ToolTip="Add do Loop" />
+                                    <Button Content="For" ToolTipService.ToolTip="Add for Loop" />
+                                    <Button Content="For each" ToolTipService.ToolTip="Add foreach Loop" />
+                                    <Button Content="While" ToolTipService.ToolTip="Add while Loop" />
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Border>
-                    <Border
-                        Padding="8"
-                        BorderBrush="Black"
-                        BorderThickness="1"
-                        CornerRadius="4">
-                        <StackPanel Orientation="Vertical" Spacing="2">
-                            <TextBlock Text="Output:" />
-                            <StackPanel Orientation="Horizontal" Spacing="2">
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
-                                <Button>
-                                    <SymbolIcon Symbol="Home" />
-                                </Button>
+                        </Border>
+                        <Border
+                            Padding="8"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="4">
+                            <StackPanel Orientation="Vertical" Spacing="2">
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <ImageIcon
+                                        Width="16"
+                                        VerticalAlignment="Center"
+                                        Source="{StaticResource In_Out}" />
+                                    <TextBlock Text="Input/Output:" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                    <Button Content="In" ToolTipService.ToolTip="Add input" />
+                                    <Button Content="Output" ToolTipService.ToolTip="Add output" />
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
-            </Expander.Content>
-        </Expander>
-
+                        </Border>
+                    </StackPanel>
+                </Expander.Content>
+            </Expander>
+        </ScrollViewer>
     </Grid>
 </Page>

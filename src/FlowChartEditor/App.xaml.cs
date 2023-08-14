@@ -9,6 +9,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,6 +17,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Resources.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -37,7 +39,8 @@ namespace FlowChartEditor
         {
             this.InitializeComponent();
 
-            Ioc.Default.ConfigureServices(new ServiceCollection()                
+            Ioc.Default.ConfigureServices(new ServiceCollection()   
+                .AddSingleton<MainWindow>()
                 .AddSingleton<PgPgMainViewModel>()
                 .BuildServiceProvider()
               );
@@ -49,10 +52,10 @@ namespace FlowChartEditor
         /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            m_window = new MainWindow();
+            m_window = Ioc.Default.GetService<MainWindow>();
             m_window.Activate();
         }
 
-        private Window m_window;
+        Window m_window;
     }
 }
