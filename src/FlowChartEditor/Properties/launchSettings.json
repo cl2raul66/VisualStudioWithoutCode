@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FlowChartEditor (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FlowChartEditor (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VisualStudioWithoutCode.Core.Models;
+namespace FlowChartEditor.Models;
 
-public class Process
+public class Connector : Instruction
 {
 }

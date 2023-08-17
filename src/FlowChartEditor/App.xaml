@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="FlowChartEditor.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlowChartEditor">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!--  Other merged dictionaries here  -->
+            </ResourceDictionary.MergedDictionaries>
+            <!--  Other app resources here  -->
+            <SvgImageSource x:Key="Connector" UriSource="ms-appx:///Assets/ico/commonshapes/Connector.svg" />
+            <SvgImageSource x:Key="Decision" UriSource="ms-appx:///Assets/ico/commonshapes/Decision.svg" />
+            <SvgImageSource x:Key="In_Out" UriSource="ms-appx:///Assets/ico/commonshapes/In_Out.svg" />
+            <SvgImageSource x:Key="Loop" UriSource="ms-appx:///Assets/ico/commonshapes/Loop.svg" />
+            <SvgImageSource x:Key="Process" UriSource="ms-appx:///Assets/ico/commonshapes/Process.svg" />
+            <SvgImageSource x:Key="Terminal" UriSource="ms-appx:///Assets/ico/commonshapes/Terminal.svg" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

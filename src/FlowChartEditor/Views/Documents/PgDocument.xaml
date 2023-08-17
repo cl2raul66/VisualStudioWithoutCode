@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="FlowChartEditor.Views.PgDocument"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:FlowChartEditor.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:FlowChartEditor.Models"
+    xmlns:tools="using:FlowChartEditor.Tools"
+    xmlns:vm="using:FlowChartEditor.ViewModels"
+    d:DataContext="{x:Bind vm:PgDocumentViewModel}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="TerminalTemplate" x:DataType="model:Terminal">
+            <Grid>
+                <Path
+                    Width="auto"
+                    Height="auto"
+                    Data="M33.2917 64.4427C14.9052 64.4427 0 50.1158 0 32.4427C0 14.7696 14.9052 0.442722 33.2917 0.442722L102.708 0.442722C121.095 0.442722 136 14.7696 136 32.4427C136 50.1158 121.095 64.4427 102.708 64.4427L33.2917 64.4427Z"
+                    Stroke="Black"
+                    StrokeThickness="1" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="12"
+                    Text="{Binding TypeInstruction}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="FlowLineTemplate" x:DataType="model:FlowLine">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Path
+                    Width="auto"
+                    Height="64"
+                    Data="M7 0L5 0L5 52L0 52L6 64L12 52L7 52L7 0Z"
+                    Stroke="Black"
+                    StrokeThickness="1" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="ConnectorTemplate" x:DataType="model:Connector" />
+        <DataTemplate x:Key="InputTemplate" x:DataType="model:Input" />
+        <DataTemplate x:Key="OutputTemplate" x:DataType="model:Output" />
+        <DataTemplate x:Key="ProcessTemplate" x:DataType="model:Process" />
+        <DataTemplate x:Key="DecisionTemplate" x:DataType="model:Decision" />
+        <DataTemplate x:Key="LoopTemplate" x:DataType="model:Loop" />
+
+        <tools:FlowTemplateSelector
+            x:Key="FlowSelector"
+            FlowLineTemplate="{StaticResource FlowLineTemplate}"
+            TerminalTemplate="{StaticResource TerminalTemplate}" />
+    </Page.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Viewbox
+            MinWidth="100"
+            MinHeight="100"
+            Stretch="Uniform"
+            StretchDirection="Both">
+            <ItemsRepeater ItemTemplate="{StaticResource FlowSelector}" ItemsSource="{Binding CurrentFlow}" />
+            <!--<StackPanel>
+                <Grid>
+                    <Path
+                        Width="auto"
+                        Height="auto"
+                        Data="M33.2917 64.4427C14.9052 64.4427 0 50.1158 0 32.4427C0 14.7696 14.9052 0.442722 33.2917 0.442722L102.708 0.442722C121.095 0.442722 136 14.7696 136 32.4427C136 50.1158 121.095 64.4427 102.708 64.4427L33.2917 64.4427Z"
+                        Stroke="Black"
+                        StrokeThickness="1" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="12"
+                        Text="Begin" />
+                </Grid>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Path
+                        Width="auto"
+                        Height="64"
+                        Data="M7 0L5 0L5 52L0 52L6 64L12 52L7 52L7 0Z"
+                        Stroke="Black"
+                        StrokeThickness="1" />
+                </Grid>
+                <Grid>
+                    <Path
+                        Width="auto"
+                        Height="auto"
+                        Data="M0 0L136 0L136 64L0 64L0 0Z"
+                        Stroke="Black"
+                        StrokeThickness="1" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="12"
+                        Text="A = B + C" />
+                </Grid>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Path
+                        Width="auto"
+                        Height="64"
+                        Data="M7 0L5 0L5 52L0 52L6 64L12 52L7 52L7 0Z"
+                        Stroke="Black"
+                        StrokeThickness="1" />
+                </Grid>
+                <Grid>
+                    <Path
+                        Width="auto"
+                        Height="auto"
+                        Data="M33.2917 64.4427C14.9052 64.4427 0 50.1158 0 32.4427C0 14.7696 14.9052 0.442722 33.2917 0.442722L102.708 0.442722C121.095 0.442722 136 14.7696 136 32.4427C136 50.1158 121.095 64.4427 102.708 64.4427L33.2917 64.4427Z"
+                        Stroke="Black"
+                        StrokeThickness="1" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="12"
+                        Text="End" />
+                </Grid>
+            </StackPanel>-->
+        </Viewbox>
+    </ScrollViewer>
+</Page>
