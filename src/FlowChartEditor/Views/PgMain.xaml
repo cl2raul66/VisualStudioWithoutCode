@@ -50,13 +50,16 @@
                 <tvits:TVItemTemplateSelector>
                     <tvits:TVItemTemplateSelector.PgDocument>
                         <DataTemplate x:DataType="model:TVItem">
-                            <TabViewItem Header="{x:Bind Name}" IsClosable="True" CloseRequested="TabViewItem_CloseRequested">
+                            <TabViewItem
+                                CloseRequested="TabViewItem_CloseRequested"
+                                Header="{x:Bind Name}"
+                                IsClosable="True">
                                 <TabViewItem.IconSource>
                                     <SymbolIconSource Symbol="Document" />
                                 </TabViewItem.IconSource>
                                 <TabViewItem.Content>
                                     <Frame>
-                                        <local:PgDocument />
+                                        <local:PgDocument Title="{x:Bind Name}" Id="{x:Bind Id}" />
                                     </Frame>
                                 </TabViewItem.Content>
                             </TabViewItem>

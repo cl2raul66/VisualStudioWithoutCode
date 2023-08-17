@@ -8,12 +8,11 @@ namespace FlowToCSharpConverter;
 
 public class Parser
 {
-    readonly List<string> Flows;
+    readonly List<string> Flows= new();
     public string Title { get; private set; } 
 
     public Parser()
     {
-        Flows = new() { "Begin", "End" };
     }
 
     void SetDocumentTitle(string title) => Title = title; 

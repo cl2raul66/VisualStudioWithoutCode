@@ -16,6 +16,7 @@
             <SvgImageSource x:Key="In_Out" UriSource="ms-appx:///Assets/ico/commonshapes/In_Out.svg" />
             <SvgImageSource x:Key="Loop" UriSource="ms-appx:///Assets/ico/commonshapes/Loop.svg" />
             <SvgImageSource x:Key="Process" UriSource="ms-appx:///Assets/ico/commonshapes/Process.svg" />
+            <SvgImageSource x:Key="Terminal" UriSource="ms-appx:///Assets/ico/commonshapes/Terminal.svg" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

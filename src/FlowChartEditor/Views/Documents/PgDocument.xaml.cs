@@ -1,3 +1,5 @@
+using CommunityToolkit.Mvvm.DependencyInjection;
+using FlowChartEditor.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -23,9 +25,14 @@ namespace FlowChartEditor.Views
     /// </summary>
     public sealed partial class PgDocument : Page
     {
+        public string Title { set; get; }
+        public Guid Id { set; get; }
+
         public PgDocument()
         {
             this.InitializeComponent();
+            this.DataContext = Ioc.Default.GetService<PgDocumentViewModel>();
         }
+
     }
 }

@@ -42,6 +42,7 @@ namespace FlowChartEditor
             Ioc.Default.ConfigureServices(new ServiceCollection()   
                 .AddSingleton<MainWindow>()
                 .AddSingleton<PgPgMainViewModel>()
+                .AddSingleton<PgDocumentViewModel>()
                 .BuildServiceProvider()
               );
         }

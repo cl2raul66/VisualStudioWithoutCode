@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace FlowChartEditor.Models;
 
-namespace VisualStudioWithoutCode.Core.Models;
-
-public class FlowLine
+public class FlowLine : Flow
 {
+    public int Start { get; set; }
+    public int End { get; set; }
+    public string Direction => End > Start ? "down" :  "up";
 
+    public FlowLine(int idx, int? end)
+    {
+        Idx = idx;
+        Start = idx - 1;
+        End = end is null ? idx + 1 : end.Value;
+    }
 }

@@ -16,13 +16,15 @@
         </Grid.RowDefinitions>
         <ScrollViewer Grid.Row="0">
             <Expander
-                Width="250"
                 MaxHeight="500"
                 ExpandDirection="Down"
                 Header="Common shapes"
                 IsExpanded="True">
                 <Expander.Content>
-                    <StackPanel Orientation="Vertical" Spacing="2">
+                    <StackPanel
+                        Width="250"
+                        Orientation="Vertical"
+                        Spacing="2">
                         <Border
                             Padding="8"
                             BorderBrush="Black"
@@ -64,12 +66,18 @@
                                     <ImageIcon Width="16" Source="{StaticResource Loop}" />
                                     <TextBlock Text="Loop:" />
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="2">
+                                <VariableSizedWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal">
                                     <Button Content="Do" ToolTipService.ToolTip="Add do Loop" />
                                     <Button Content="For" ToolTipService.ToolTip="Add for Loop" />
-                                    <Button Content="For each" ToolTipService.ToolTip="Add foreach Loop" />
-                                    <Button Content="While" ToolTipService.ToolTip="Add while Loop" />
-                                </StackPanel>
+                                    <Button
+                                        Content="For each"
+                                        ToolTipService.ToolTip="Add foreach Loop"
+                                        VariableSizedWrapGrid.ColumnSpan="2" />
+                                    <Button
+                                        Content="While"
+                                        ToolTipService.ToolTip="Add while Loop"
+                                        VariableSizedWrapGrid.ColumnSpan="2" />
+                                </VariableSizedWrapGrid>
                             </StackPanel>
                         </Border>
                         <Border
