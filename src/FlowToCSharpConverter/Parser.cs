@@ -13,6 +13,7 @@ public class Parser
 
     public Parser()
     {
+        Title = string.Empty;
     }
 
     void SetDocumentTitle(string title) => Title = title; 

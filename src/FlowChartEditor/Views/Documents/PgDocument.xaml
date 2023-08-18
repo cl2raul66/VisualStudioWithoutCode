@@ -13,7 +13,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
     <Page.Resources>
-        <DataTemplate x:Key="TerminalTemplate" x:DataType="model:Terminal">
+        <DataTemplate x:Key="TerminalTpl" x:DataType="model:Terminal">
             <Grid>
                 <Path
                     Width="auto"
@@ -28,7 +28,7 @@
                     Text="{Binding TypeInstruction}" />
             </Grid>
         </DataTemplate>
-        <DataTemplate x:Key="FlowLineTemplate" x:DataType="model:FlowLine">
+        <DataTemplate x:Key="FlowLineTpl" x:DataType="model:FlowLine">
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Path
                     Width="auto"
@@ -38,17 +38,35 @@
                     StrokeThickness="1" />
             </Grid>
         </DataTemplate>
-        <DataTemplate x:Key="ConnectorTemplate" x:DataType="model:Connector" />
-        <DataTemplate x:Key="InputTemplate" x:DataType="model:Input" />
-        <DataTemplate x:Key="OutputTemplate" x:DataType="model:Output" />
-        <DataTemplate x:Key="ProcessTemplate" x:DataType="model:Process" />
-        <DataTemplate x:Key="DecisionTemplate" x:DataType="model:Decision" />
-        <DataTemplate x:Key="LoopTemplate" x:DataType="model:Loop" />
+        <DataTemplate x:Key="ConnectorTpl" x:DataType="model:Connector">
+            <Grid />
+        </DataTemplate>
+        <DataTemplate x:Key="InputTpl" x:DataType="model:Input">
+            <Grid />
+        </DataTemplate>
+        <DataTemplate x:Key="OutputTpl" x:DataType="model:Output">
+            <Grid />
+        </DataTemplate>
+        <DataTemplate x:Key="ProcessTpl" x:DataType="model:Process">
+            <Grid />
+        </DataTemplate>
+        <DataTemplate x:Key="DecisionTpl" x:DataType="model:Decision">
+            <Grid />
+        </DataTemplate>
+        <DataTemplate x:Key="LoopTpl" x:DataType="model:Loop">
+            <Grid />
+        </DataTemplate>
 
         <tools:FlowTemplateSelector
             x:Key="FlowSelector"
-            FlowLineTemplate="{StaticResource FlowLineTemplate}"
-            TerminalTemplate="{StaticResource TerminalTemplate}" />
+            ConnectorTemplate="{StaticResource ConnectorTpl}"
+            DecisionTemplate="{StaticResource DecisionTpl}"
+            FlowLineTemplate="{StaticResource FlowLineTpl}"
+            InputTemplate="{StaticResource InputTpl}"
+            LoopTemplate="{StaticResource LoopTpl}"
+            OutputTemplate="{StaticResource OutputTpl}"
+            ProcessTemplate="{StaticResource ProcessTpl}"
+            TerminalTemplate="{StaticResource TerminalTpl}" />
     </Page.Resources>
 
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">

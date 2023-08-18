@@ -31,9 +31,15 @@
                             BorderThickness="1"
                             CornerRadius="4">
                             <StackPanel Orientation="Vertical" Spacing="2">
-                                <StackPanel Orientation="Horizontal" Spacing="2">
-                                    <ImageIcon Width="16" Source="{StaticResource Process}" />
-                                    <TextBlock Text="Process:" />
+                                <StackPanel Orientation="Horizontal" Spacing="4">
+                                    <Path
+                                        Width="16"
+                                        Height="16"
+                                        Data="{StaticResource Process}"
+                                        Stretch="Uniform"
+                                        Stroke="Black"
+                                        StrokeThickness="1" />
+                                    <TextBlock VerticalAlignment="Center" Text="Process:" />
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Spacing="2">
                                     <Button Content="Process" ToolTipService.ToolTip="Add process" />
@@ -46,9 +52,15 @@
                             BorderThickness="1"
                             CornerRadius="4">
                             <StackPanel Orientation="Vertical" Spacing="2">
-                                <StackPanel Orientation="Horizontal" Spacing="2">
-                                    <ImageIcon Width="16" Source="{StaticResource Decision}" />
-                                    <TextBlock Text="Decision:" />
+                                <StackPanel Orientation="Horizontal" Spacing="4">
+                                    <Path
+                                        Width="16"
+                                        Height="16"
+                                        Data="{StaticResource Decision}"
+                                        Stretch="Uniform"
+                                        Stroke="Black"
+                                        StrokeThickness="1" />
+                                    <TextBlock VerticalAlignment="Center" Text="Decision:" />
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Spacing="2">
                                     <Button Content="If" ToolTipService.ToolTip="Add if decision" />
@@ -62,9 +74,15 @@
                             BorderThickness="1"
                             CornerRadius="4">
                             <StackPanel Orientation="Vertical" Spacing="2">
-                                <StackPanel Orientation="Horizontal" Spacing="2">
-                                    <ImageIcon Width="16" Source="{StaticResource Loop}" />
-                                    <TextBlock Text="Loop:" />
+                                <StackPanel Orientation="Horizontal" Spacing="4">
+                                    <Path
+                                        Width="16"
+                                        Height="16"
+                                        Data="{StaticResource Loop}"
+                                        Stretch="Uniform"
+                                        Stroke="Black"
+                                        StrokeThickness="1" />
+                                    <TextBlock VerticalAlignment="Center" Text="Loop:" />
                                 </StackPanel>
                                 <VariableSizedWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal">
                                     <Button Content="Do" ToolTipService.ToolTip="Add do Loop" />
@@ -86,12 +104,15 @@
                             BorderThickness="1"
                             CornerRadius="4">
                             <StackPanel Orientation="Vertical" Spacing="2">
-                                <StackPanel Orientation="Horizontal" Spacing="2">
-                                    <ImageIcon
+                                <StackPanel Orientation="Horizontal" Spacing="4">
+                                    <Path
                                         Width="16"
-                                        VerticalAlignment="Center"
-                                        Source="{StaticResource In_Out}" />
-                                    <TextBlock Text="Input/Output:" />
+                                        Height="16"
+                                        Data="{StaticResource In_Out}"
+                                        Stretch="Uniform"
+                                        Stroke="Black"
+                                        StrokeThickness="1" />
+                                    <TextBlock VerticalAlignment="Center" Text="Input/Output:" />
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Spacing="2">
                                     <Button Content="In" ToolTipService.ToolTip="Add input" />

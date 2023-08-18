@@ -11,12 +11,19 @@
                 <!--  Other merged dictionaries here  -->
             </ResourceDictionary.MergedDictionaries>
             <!--  Other app resources here  -->
-            <SvgImageSource x:Key="Connector" UriSource="ms-appx:///Assets/ico/commonshapes/Connector.svg" />
+            <x:String x:Key="Terminal">M33.2917 64.4427C14.9052 64.4427 0 50.1158 0 32.4427C0 14.7696 14.9052 0.442722 33.2917 0.442722L102.708 0.442722C121.095 0.442722 136 14.7696 136 32.4427C136 50.1158 121.095 64.4427 102.708 64.4427L33.2917 64.4427Z</x:String>
+            <x:String x:Key="Connector">M0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32Z</x:String>
+            <x:String x:Key="In_Out">M40 0L136 0L96.0001 64L0 64L40 0Z</x:String>
+            <x:String x:Key="Process">M0 0L136 0L136 64L0 64L0 0Z</x:String>
+            <x:String x:Key="Decision">M32 -0.526923L64.5269 32L32 64.5269L-0.526928 32L32 -0.526923Z</x:String>
+            <x:String x:Key="Loop">M20 0L116 0L136 32L116 64.0001L20 64.0001L-4.76837e-06 32L20 0Z</x:String>
+
+            <!--<SvgImageSource x:Key="Connector" UriSource="ms-appx:///Assets/ico/commonshapes/Connector.svg" />
             <SvgImageSource x:Key="Decision" UriSource="ms-appx:///Assets/ico/commonshapes/Decision.svg" />
             <SvgImageSource x:Key="In_Out" UriSource="ms-appx:///Assets/ico/commonshapes/In_Out.svg" />
             <SvgImageSource x:Key="Loop" UriSource="ms-appx:///Assets/ico/commonshapes/Loop.svg" />
             <SvgImageSource x:Key="Process" UriSource="ms-appx:///Assets/ico/commonshapes/Process.svg" />
-            <SvgImageSource x:Key="Terminal" UriSource="ms-appx:///Assets/ico/commonshapes/Terminal.svg" />
+            <SvgImageSource x:Key="Terminal" UriSource="ms-appx:///Assets/ico/commonshapes/Terminal.svg" />-->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

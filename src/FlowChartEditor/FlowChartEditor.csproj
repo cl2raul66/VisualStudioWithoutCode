@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
@@ -18,16 +18,6 @@
     <Page Remove="Views\Principal\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Assets\ico\commonshapes\Connector.svg" />
-    <None Remove="Assets\ico\commonshapes\Decision_if.svg" />
-    <None Remove="Assets\ico\commonshapes\Decision_switch.svg" />
-    <None Remove="Assets\ico\commonshapes\In.svg" />
-    <None Remove="Assets\ico\commonshapes\Loop_do.svg" />
-    <None Remove="Assets\ico\commonshapes\Loop_for.svg" />
-    <None Remove="Assets\ico\commonshapes\Loop_foreach.svg" />
-    <None Remove="Assets\ico\commonshapes\Loop_while.svg" />
-    <None Remove="Assets\ico\commonshapes\Out.svg" />
-    <None Remove="Assets\ico\commonshapes\Process.svg" />
     <None Remove="Views\PgCommonShapes.xaml" />
     <None Remove="Views\PgDocument.xaml" />
     <None Remove="Views\PgMain.xaml" />
@@ -62,6 +52,7 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\ico\" />
     <Folder Include="Views\Documents\" />
   </ItemGroup>
   <ItemGroup>
