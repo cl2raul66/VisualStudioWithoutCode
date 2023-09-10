@@ -13,20 +13,18 @@
         <MenuBar>
             <MenuBarItem Title="File">
                 <MenuFlyoutSubItem Text="New">
-                    <MenuFlyoutItem IsEnabled="True" Text="Solution" />
                     <MenuFlyoutItem Text="Project" />
                     <MenuFlyoutItem Text="File" />
                 </MenuFlyoutSubItem>
                 <MenuFlyoutSubItem Text="Open">
-                    <MenuFlyoutItem Text="Solution or Project" />
-                    <MenuFlyoutItem Text="Folder" />
+                    <MenuFlyoutItem Text="Project" />
                 </MenuFlyoutSubItem>
                 <MenuFlyoutSeparator />
                 <MenuFlyoutItem Text="Save" />
                 <MenuFlyoutItem Text="Save as..." />
                 <MenuFlyoutItem Text="Save all" />
                 <MenuFlyoutSeparator />
-                <MenuFlyoutItem Text="Close solution" />
+                <MenuFlyoutItem Text="Close project" />
                 <MenuFlyoutItem Text="Close" />
                 <MenuFlyoutSeparator />
                 <MenuFlyoutItem Text="Exit" />
@@ -65,7 +63,10 @@
                 <MenuFlyoutItem Text="About" />
             </MenuBarItem>
         </MenuBar>
-        <TabView CloseButtonOverlayMode="OnPointerOver" />
+        <TabView
+            CloseButtonOverlayMode="OnPointerOver"
+            IsAddTabButtonVisible="False"
+            TabWidthMode="Equal" />
     </StackPanel>
 
 </Page>
