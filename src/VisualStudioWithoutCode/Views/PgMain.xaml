@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="VisualStudioWithoutCode.Views.PgMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:VisualStudioWithoutCode.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical">
+        <MenuBar>
+            <MenuBarItem Title="File">
+                <MenuFlyoutSubItem Text="New">
+                    <MenuFlyoutItem IsEnabled="True" Text="Solution" />
+                    <MenuFlyoutItem Text="Project" />
+                    <MenuFlyoutItem Text="File" />
+                </MenuFlyoutSubItem>
+                <MenuFlyoutSubItem Text="Open">
+                    <MenuFlyoutItem Text="Solution or Project" />
+                    <MenuFlyoutItem Text="Folder" />
+                </MenuFlyoutSubItem>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Save" />
+                <MenuFlyoutItem Text="Save as..." />
+                <MenuFlyoutItem Text="Save all" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Close solution" />
+                <MenuFlyoutItem Text="Close" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Exit" />
+            </MenuBarItem>
+
+            <MenuBarItem Title="Edit">
+                <MenuFlyoutItem Text="Undo" />
+                <MenuFlyoutItem Text="Redo" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Cut" />
+                <MenuFlyoutItem Text="Copy" />
+                <MenuFlyoutItem Text="Paste" />
+                <MenuFlyoutItem Text="Clone" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Select all" />
+            </MenuBarItem>
+
+            <MenuBarItem Title="View">
+                <MenuFlyoutItem Text="Output" />
+                <MenuFlyoutSeparator />
+                <RadioMenuFlyoutItem GroupName="OrientationGroup" Text="Landscape" />
+                <RadioMenuFlyoutItem
+                    GroupName="OrientationGroup"
+                    IsChecked="True"
+                    Text="Portrait" />
+                <MenuFlyoutSeparator />
+                <RadioMenuFlyoutItem GroupName="SizeGroup" Text="Small icons" />
+                <RadioMenuFlyoutItem
+                    GroupName="SizeGroup"
+                    IsChecked="True"
+                    Text="Medium icons" />
+                <RadioMenuFlyoutItem GroupName="SizeGroup" Text="Large icons" />
+            </MenuBarItem>
+
+            <MenuBarItem Title="Help">
+                <MenuFlyoutItem Text="About" />
+            </MenuBarItem>
+        </MenuBar>
+        <TabView CloseButtonOverlayMode="OnPointerOver" />
+    </StackPanel>
+
+</Page>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "VisualStudioWithoutCode (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "VisualStudioWithoutCode (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
