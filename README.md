@@ -1,2 +1,2 @@
-# Visual Studio Without Code
-It is an application that creates a .NET library using flowchart.
+# Visual Studio Without Code 
+This is an application to create .NET libraries without code.
